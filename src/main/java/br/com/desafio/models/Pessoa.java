@@ -6,6 +6,8 @@ public class Pessoa {
 	
 	private String nome;
 	private int score;
+	private PessoaFisica pessoaFisica;
+	private PessoaJuridica pessoaJuridica;
 	private Conta conta;
 	
 

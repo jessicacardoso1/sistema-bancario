@@ -1,20 +1,22 @@
 package br.com.desafio.models;
 
-public class PessoaFisica extends Pessoa {
+public class PessoaFisica{
 	
-	private int numDoc[]  =  new int[11];
-	
-	public PessoaFisica(String nome, Conta conta, int[] numDoc) {
-		super(nome, conta);
-		this.setNumDoc(numDoc);
+	private int cpf;
+
+	public PessoaFisica(int cpf) {
+		super();
+		this.cpf = cpf;
 	}
 
-	public int[] getNumDoc() {
-		return numDoc;
+	public int getCpf() {
+		return cpf;
 	}
 
-	public void setNumDoc(int numDoc[]) {
-		this.numDoc = numDoc;
+	public void setCpf(int cpf) {
+		this.cpf = cpf;
 	}
+	
+	
 
 }
