@@ -4,13 +4,14 @@ public class Conta {
 	private int numero;
 	private String agencia;
 	private String tipo;
-	private float limite; 
+	private float limiteCheque;
+	private float limiteCartao;
 	
-	public Conta(int numero, String agencia, String tipo, Pessoa pessoa, Float limite) {
+	public Conta(int numero, String agencia, String tipo, Pessoa pessoa, Float limiteCheque) {
 		this.numero = numero;
 		this.agencia = agencia;
 		this.tipo = tipo;
-		this.limite = limite;
+		this.limiteCheque = limiteCheque;
 	}
 	public Conta() {}
 
@@ -37,11 +38,17 @@ public class Conta {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	public float getLimite() {
-		return limite;
+	public float getlimiteCheque() {
+		return limiteCheque;
 	}
-	public void setLimite(float limite) {
-		this.limite = limite;
+	public void setlimiteCheque(float limiteCheque) {
+		this.limiteCheque = limiteCheque;
+	}
+	public float getLimiteCartao() {
+		return limiteCartao;
+	}
+	public void setLimiteCartao(float limiteCartao) {
+		this.limiteCartao = limiteCartao;
 	}
 
 
