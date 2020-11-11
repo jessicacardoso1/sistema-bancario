@@ -2,21 +2,21 @@ package br.com.desafio.models;
 
 public class PessoaFisica{
 	
-	private int cpf;
+	private String cpf;
 
-	public PessoaFisica(int cpf) {
+	public PessoaFisica(String cpf) {
 		super();
 		this.cpf = cpf;
 	}
+	public PessoaFisica() {}
 
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	
-	
+		
 
 }

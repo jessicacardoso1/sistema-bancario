@@ -1,19 +1,20 @@
 package br.com.desafio.models;
 
 public class PessoaJuridica{
-	private int cnpj;
+	
+	private String cnpj;
 
-	public PessoaJuridica(int cnpj) {
+	public PessoaJuridica(String cnpj) {
 		super();
-		cnpj = cnpj;
+		this.cnpj = cnpj;
 	}
 
-	public int getCnpj() {
+	public String getCnpj() {
 		return cnpj;
 	}
 
-	public void setCnpj(int cnpj) {
-		cnpj = cnpj;
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
 	}
 
 	
