@@ -1,6 +1,5 @@
 package br.com.desafio.models;
 
-import java.util.Random;
 
 public class Pessoa {
 	
@@ -11,20 +10,22 @@ public class Pessoa {
 	private Conta conta;
 	
 
-	public Pessoa(String nome, Conta conta) {
-		Random random = new Random();
+	public Pessoa(String nome, int score, PessoaFisica pessoaFisica, 
+			PessoaJuridica pessoaJuridica, Conta conta) {
 		this.nome = nome;
-		this.score = random.nextInt(10);
+		this.score = score;
+		this.pessoaFisica = pessoaFisica;
+		this.pessoaJuridica = pessoaJuridica;
 		this.conta = conta;
 	}
+	public Pessoa() {}
 
 	public int getScore() {
 		return score;
 	}
 
-	public void setScore() {
-		Random random = new Random();
-		this.score = random.nextInt(10);
+	public void setScore(int score) {
+		this.score = score;
 	}
 
 	public String getNome() {
@@ -41,6 +42,22 @@ public class Pessoa {
 
 	public void setConta(Conta conta) {
 		this.conta = conta;
+	}
+
+	public PessoaFisica getPessoaFisica() {
+		return pessoaFisica;
+	}
+
+	public void setPessoaFisica(PessoaFisica pessoaFisica) {
+		this.pessoaFisica = pessoaFisica;
+	}
+
+	public PessoaJuridica getPessoaJuridica() {
+		return pessoaJuridica;
+	}
+
+	public void setPessoaJuridica(PessoaJuridica pessoaJuridica) {
+		this.pessoaJuridica = pessoaJuridica;
 	}
 
 }
