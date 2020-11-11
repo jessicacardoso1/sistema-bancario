@@ -15,10 +15,10 @@ public class PessoaServices {
 	List<Conta> listaContas = new ArrayList<Conta>();
 	
 	public String cadastroPessoa(Pessoa pessoaParam) {
-		Random randomNum = new Random(); 
-		Random randomScore = new Random();
 		Conta conta = new Conta();
 		Pessoa pessoa = new Pessoa();
+		Random randomNum = new Random(); 
+		Random randomScore = new Random();
 		int num = 100000 + randomNum.nextInt(900000);
 		int score = randomScore.nextInt(10);
 		
