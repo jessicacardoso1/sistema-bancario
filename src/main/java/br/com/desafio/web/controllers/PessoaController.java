@@ -1,6 +1,5 @@
 package br.com.desafio.web.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.desafio.models.Conta;
 import br.com.desafio.models.Pessoa;
-import br.com.desafio.services.implementations.PessoaServices;
+import br.com.desafio.services.PessoaServices;
 
 @RestController
 public class PessoaController {
 	
-	List<Pessoa> listaPessoas = new ArrayList<Pessoa>();
-	List<Conta> listaContas = new ArrayList<Conta>();
 	
 	@Autowired
     private PessoaServices pessoaService;
@@ -28,17 +25,17 @@ public class PessoaController {
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "/listarPessoas", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Pessoa> listarPessoas(){
-        return listaPessoas;
+        return pessoaService.listarPessoas();
     }
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "/listarContas", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Conta> listarContas(){
-        return listaContas;
+        return pessoaService.listarContas();
     }
     
-    @RequestMapping(value = "/cadastro", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    
+    @RequestMapping(value = "/cadastro", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces="text/plain")
     public String cadastroPessoa(@RequestBody Pessoa pessoa){
-    	 pessoaService.cadastroPessoa(pessoa, listaPessoas, listaContas);
-    	 return "ok";
+    	 return pessoaService.cadastroPessoa(pessoa);
     }
 }
