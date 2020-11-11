@@ -8,7 +8,8 @@ public class PessoaJuridica{
 		super();
 		this.cnpj = cnpj;
 	}
-
+	public PessoaJuridica() {}
+	
 	public String getCnpj() {
 		return cnpj;
 	}
